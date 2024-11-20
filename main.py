@@ -9,6 +9,8 @@ import websockets
 import json
 from threading import Thread, Lock
 import time
+import uvicorn
+
 
 # Global variables and lock for thread-safe updates
 predictions = {}
@@ -140,4 +142,5 @@ async def main():
         await asyncio.Future()  # Run forever
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    uvicorn.run("main:main", host="0.0.0.0", port=8000)
+

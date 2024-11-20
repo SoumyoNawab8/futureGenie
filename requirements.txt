@@ -6,3 +6,4 @@ yfinance
 scikit-learn
 websockets
 nest_asyncio
+uvicorn
